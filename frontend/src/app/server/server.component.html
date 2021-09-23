@@ -1,0 +1,8 @@
+<p [innerText]="value"></p>
+<!-- <input type="text" (input)="onUpdateServer($event)"> -->
+
+<input type="text" [(ngModel)]="value" class="form-control">
+<button class="btn btn-primary" [disabled]="allowServer" (click)="getServerName()">Add Server</button>
+
+<p>The server Id is: {{serverId}}</p>
+<p>The server Name is: {{serverName}}</p>

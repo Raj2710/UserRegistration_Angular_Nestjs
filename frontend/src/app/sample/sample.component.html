@@ -1,0 +1,28 @@
+
+<div class="wrapper"> 
+   <h1>{{pageName}}</h1>
+   <input type="text" class="form-control" [(ngModel)]="name" placeholder="Name">
+   <br>
+   <input type="text" class="form-control" [(ngModel)]="mob" placeholder="Mobile">
+   <br>
+   <input type="email" class="form-control" [(ngModel)]="email" placeholder="email">
+   <br>
+   <p>Name is {{name}} and mobile is {{mob}} and email is {{email}}</p>
+   <button class="btn btn-success" [disabled]="allowButton" (click)="updateData()"> Submit </button>
+    <br>
+    <br>
+   <table class="table table-striped">
+       <tbody>
+           <tr>
+               <th>Name</th>
+               <th>Mobile</th>
+               <th>Email</th>
+           </tr>
+           <tr *ngFor = "let details of details">
+            <td>{{details.name}}</td>
+            <td>{{details.mobile}}</td>
+            <td>{{details.email}}</td>
+           </tr>
+       </tbody>
+   </table>
+</div>
